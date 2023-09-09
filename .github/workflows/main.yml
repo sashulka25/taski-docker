@@ -114,7 +114,7 @@ jobs:
           push: true
           tags: alex2325/taski_frontend:latest
 
-  build_gateway_and_puhs_to_docker_hub:
+  build_gateway_and_push_to_docker_hub:
     name: Push gateway Docker image to DockerHub
     runs-on: ubuntu-latest
     steps:
@@ -130,6 +130,6 @@ jobs:
       - name: Push to DockerHub
         uses: docker/build-push-action@v4
         with:
-        context: ./gateway/
-        push: true
-        tags: alex2325/taski_gateway:latest
+          context: ./gateway/
+          push: true
+          tags: alex2325/taski_gateway:latest
